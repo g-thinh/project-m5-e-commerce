@@ -27,7 +27,7 @@ const CheckoutPage = () => {
 
     try {
       dispatch(requestCartItems());
-      fetch("/cart")
+      fetch("/api/cart")
         .then((res) => res.json())
         // .then((json) => console.log(json));
         .then((json) => dispatch(receiveCartItems(json)));

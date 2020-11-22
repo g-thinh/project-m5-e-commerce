@@ -14,7 +14,7 @@ import { FiArrowLeft } from "react-icons/fi";
 import Spinner from "../../components/UI/Spinner";
 import { THEMES } from "../../components/THEMES";
 
-const CategoryPage = () => {
+const CategoryPage = ({ match }) => {
   const dispatch = useDispatch();
   const { category } = useParams();
   const ITEMS = useSelector((state) => state.DATA.allProducts);
@@ -23,7 +23,8 @@ const CategoryPage = () => {
 
   React.useEffect(() => {
     // This should be fetching "/items/category/:category"
-    const URL = window.location.pathname;
+    // const URL = window.location.pathname;
+    const URL = `/items/category/${match.params.category}`;
     try {
       dispatch(requestItems());
       fetch(URL)

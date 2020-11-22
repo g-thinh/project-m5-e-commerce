@@ -15,14 +15,17 @@ import {
 import { addCartItem } from "../../actions";
 import { THEMES } from "../../components/THEMES";
 
-const ProductItemPage = () => {
+const ProductItemPage = ({ match }) => {
   const dispatch = useDispatch();
+  console.log("Trying to fetch single item from from", match);
 
   const PRODUCT = useSelector((state) => state.DATA.currentProduct);
   const STATUS = useSelector((state) => state.DATA.status);
 
   React.useEffect(() => {
-    const URL = window.location.pathname;
+    // const URL = window.location.pathname;
+    const URL = `/api/items/item/${match.params.id}`;
+    console.log("Trying to fetch single item from from", URL);
     try {
       dispatch(requestProductItem());
       fetch(URL)
@@ -51,7 +54,7 @@ const ProductItemPage = () => {
       }),
     };
 
-    fetch("/cart", options)
+    fetch("/api/cart", options)
       .then((res) => res.json())
       .then((json) => {
         dispatch(addCartItem());

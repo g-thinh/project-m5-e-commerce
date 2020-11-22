@@ -28,18 +28,24 @@ const Layout = () => {
           <Route path="/about">
             <About />
           </Route>
-          <Route exact={true} path="/items/category/:category">
-            <CategoryPage />
-          </Route>
-          <Route exact={true} path="/items/item/:id">
-            <ProductItemPage />
-          </Route>
+          <Route
+            exact={true}
+            path="/items/category/:category"
+            render={(props) => <CategoryPage {...props} />}
+          ></Route>
+          <Route
+            exact={true}
+            path="/items/item/:id"
+            render={(props) => <ProductItemPage {...props} />}
+          ></Route>
           <Route path="/items">
             <ProductsPage />
           </Route>
-          <Route exact={true} path="/checkout/:id">
-            <OrderConfirmation />
-          </Route>
+          <Route
+            exact={true}
+            path="/checkout/:id"
+            render={(props) => <OrderConfirmation {...props} />}
+          ></Route>
           <Route path="/checkout">
             <CheckoutPage />
           </Route>

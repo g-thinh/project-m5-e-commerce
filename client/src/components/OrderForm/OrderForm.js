@@ -10,7 +10,7 @@ const OrderForm = (props) => {
   const [formFlag, setFormFlag] = React.useState(false);
 
   const postData = () => {
-    return fetch("/cart/checkout", {
+    return fetch("/api/cart/checkout", {
       method: "POST",
       headers: {
         Accept: "application/json",

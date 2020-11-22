@@ -40,7 +40,7 @@ const Product = (props) => {
                 }),
               };
 
-              fetch("/cart", options)
+              fetch("/api/cart", options)
                 .then((res) => res.json())
                 .then((json) => {
                   console.log(json);
