@@ -3,10 +3,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 const morgan = require("morgan");
-
+require("dotenv").config();
 const routes = require("./routes");
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 const buildPath = path.join(__dirname, "..", "client/build");
 
