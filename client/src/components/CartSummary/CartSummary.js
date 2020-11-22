@@ -24,7 +24,7 @@ const CartSummary = (props) => {
   React.useEffect(() => {
     try {
       dispatch(requestCartItems());
-      fetch("/cart")
+      fetch("/api/cart")
         .then((res) => res.json())
         // .then((json) => console.log(json));
         .then((json) => dispatch(receiveCartItems(json)));
@@ -43,7 +43,7 @@ const CartSummary = (props) => {
       method: "DELETE",
     };
     dispatch(deleteAllCartItems());
-    fetch("/cart", options)
+    fetch("/api/cart", options)
       .then((res) => res.json())
       .then((json) => {
         // console.log(json);

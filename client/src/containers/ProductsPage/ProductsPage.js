@@ -26,9 +26,10 @@ const ProductsPage = () => {
   React.useEffect(() => {
     // This should be fetching "/items"
     const URL = window.location.pathname;
+
     try {
       dispatch(requestItems());
-      fetch(URL)
+      fetch(`/api/items`)
         .then((res) => res.json())
         // .then((json) => console.log(json));
         .then((json) => dispatch(receiveItems(json)));
@@ -39,7 +40,7 @@ const ProductsPage = () => {
     // This is to fetch the categories data
     try {
       dispatch(requestCategories());
-      fetch("/items/category")
+      fetch("/api/items/category")
         .then((res) => res.json())
         // .then((json) => console.log(json));
         .then((json) => dispatch(receiveCategories(json)));

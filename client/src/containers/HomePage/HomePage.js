@@ -23,10 +23,10 @@ const HomePage = () => {
 
   React.useEffect(() => {
     // This should be fetching "/items/category/:category"
-    const URL = "/items/category";
+    const URL = "/api/items/category";
     try {
       dispatch(requestCategories());
-      fetch(URL)
+      fetch("/api/items/category")
         .then((res) => res.json())
         // .then((json) => console.log(json));
         .then((json) => dispatch(receiveCategories(json)));
@@ -37,7 +37,7 @@ const HomePage = () => {
     // This should be fetching "/items"
     try {
       dispatch(requestItems());
-      fetch("/items")
+      fetch("/api/items")
         .then((res) => res.json())
         // .then((json) => console.log(json));
         .then((json) => dispatch(receiveItems(json)));

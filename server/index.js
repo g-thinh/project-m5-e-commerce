@@ -30,7 +30,7 @@ express()
   .use(bodyParser.json())
   .use(express.urlencoded({ extended: false }))
   .use("/", express.static(__dirname + "/"))
-  .use("/", routes)
+  .use("/api", routes)
 
   .get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "client/build", "index.html"));
