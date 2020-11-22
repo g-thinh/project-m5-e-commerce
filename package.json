@@ -3,7 +3,7 @@
   "scripts": {
     "client": "cd client && yarn start",
     "server": "cd server && yarn start",
-    "start": "cd server && yarn start",
+    "start": "cd server && node index.js",
     "build": "(cd client && yarn install && yarn build) && (cd server && yarn install)",
     "begin": "(yarn build) && (yarn server)"
   }
