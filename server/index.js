@@ -26,12 +26,13 @@ express()
   })
   .use(morgan("tiny"))
   // .use(express.static("./server/assets"))
-  .use(express.static(buildPath))
+
   .use(bodyParser.json())
   .use(express.urlencoded({ extended: false }))
-  .use("/", express.static(__dirname + "/"))
-  .use("/api", routes)
 
+  // .use("/", express.static(__dirname + "/"))
+  .use("/api", routes)
+  .use(express.static(buildPath))
   .get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "client/build", "index.html"));
   })
