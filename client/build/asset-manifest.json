@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.js": "/static/js/main.a8ea23bf.chunk.js",
+    "main.js.map": "/static/js/main.a8ea23bf.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.cea588d5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.cea588d5.js.map",
+    "static/js/2.5651ef2c.chunk.js": "/static/js/2.5651ef2c.chunk.js",
+    "static/js/2.5651ef2c.chunk.js.map": "/static/js/2.5651ef2c.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d627ec09578daf3242ed78372193a2b5.js": "/precache-manifest.d627ec09578daf3242ed78372193a2b5.js",
+    "service-worker.js": "/service-worker.js",
+    "static/js/2.5651ef2c.chunk.js.LICENSE.txt": "/static/js/2.5651ef2c.chunk.js.LICENSE.txt",
+    "static/media/Ivan.jpg": "/static/media/Ivan.3c4353c0.jpg",
+    "static/media/Jenny.jpg": "/static/media/Jenny.9e73a4ff.jpg",
+    "static/media/Landscape.mp4": "/static/media/Landscape.c547106f.mp4",
+    "static/media/Meeting.jpg": "/static/media/Meeting.1b5f7d9b.jpg",
+    "static/media/Space.jpg": "/static/media/Space.4021430f.jpg",
+    "static/media/Thinh.jpg": "/static/media/Thinh.633bff1d.jpg",
+    "static/media/Truong.jpg": "/static/media/Truong.0eff29ac.jpg",
+    "static/media/logo1.png": "/static/media/logo1.7cc57ef9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cea588d5.js",
+    "static/js/2.5651ef2c.chunk.js",
+    "static/js/main.a8ea23bf.chunk.js"
+  ]
+}
